@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Franco Mendonça Advocacia – Direito Bancário e Empresarial</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Franco Mendonça Advocacia – Estratégia jurídica para empresários endividados. Renegociação de dívidas, análise de juros abusivos, defesa em ações bancárias e proteção patrimonial." />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #c88a12; /* dourado aproximado da logo */
+      --dark: #111111;
+      --light: #f6f6f6;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--dark);
+      background: #ffffff;
+      line-height: 1.6;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    /* HEADER */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 40px;
+      background: #000;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    header img.logo {
+      height: 42px;
+    }
+    header .brand span {
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #000;
+      padding: 10px 22px;
+      border-radius: 999px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 0.9rem;
+    }
+    .btn-primary:hover {
+      opacity: .9;
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0,1.4fr) minmax(0,1fr);
+      gap: 40px;
+      padding: 60px 40px;
+      background: radial-gradient(circle at top left,#222 0,#000 40%,#000 100%);
+      color: #fff;
+    }
+    .hero h1 {
+      font-size: 2.3rem;
+      margin-bottom: 16px;
+    }
+    .hero p.lead {
+      font-size: 1.1rem;
+      margin-bottom: 24px;
+      color: #e7e7e7;
+    }
+    .hero small {
+      display: block;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: 0.7rem;
+      color: #c4c4c4;
+    }
+    .hero-card {
+      background: #111;
+      border-radius: 16px;
+      padding: 22px 24px;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .hero-card h2 {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+    .hero-card p {
+      font-size: 0.95rem;
+      color: #d8d8d8;
+    }
+
+    /* SEÇÕES GERAIS */
+    .section-wrapper {
+      width: 100%;
+    }
+    .section {
+      padding: 60px 40px;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+    .section h2 {
+      font-size: 1.9rem;
+      margin-bottom: 18px;
+    }
+    .section p {
+      margin-bottom: 14px;
+    }
+    .section.bg-light {
+      background: var(--light);
+      width: 100%;
+    }
+    .section .subtitle {
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: 0.7rem;
+      color: #777;
+      margin-bottom: 8px;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .badge {
+      background: #000;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+      gap: 18px;
+      margin-top: 26px;
+    }
+    .card {
+      border-radius: 12px;
+      border: 1px solid #e0e0e0;
+      padding: 18px 16px;
+      background: #fff;
+    }
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+    .card p {
+      font-size: 0.9rem;
+      margin-bottom: 0;
+    }
+
+    /* FAQ */
+    .faq {
+      margin-top: 26px;
+      border-radius: 12px;
+      border: 1px solid #e0e0e0;
+      background: #fff;
+      padding: 18px 16px;
+    }
+    .faq-item {
+      border-bottom: 1px solid #ddd;
+      padding: 12px 0;
+    }
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+    .faq-item h3 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+    .faq-item p {
+      font-size: 0.9rem;
+      margin-bottom: 0;
+    }
+
+    /* CTA FINAL */
+    .cta-final {
+      text-align: center;
+      padding: 50px 20px;
+      background: #000;
+      color: #fff;
+    }
+    .cta-final p {
+      margin-bottom: 16px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #050505;
+      color: #999;
+      padding: 24px 40px;
+      font-size: 0.85rem;
+    }
+    footer a { color: var(--primary); }
+
+    @media (max-width: 768px) {
+      header { padding: 12px 16px; }
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 36px 16px;
+      }
+      .section, .section.bg-light { padding: 40px 16px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="brand">
+      <!-- Substitua o src pelo nome correto do arquivo da sua logo, se for diferente -->
+      <img src="1000004794-removebg-preview (2).png" alt="Logo Franco Mendonça Advocacia" class="logo" />
+      <span>Franco Mendonça Advocacia</span>
+    </div>
+    <a href="https://api.whatsapp.com/send?phone=5516999781654&text=Ol%C3%A1!%20Gostaria%20de%20uma%20an%C3%A1lise%20jur%C3%ADdica%20do%20meu%20caso." class="btn-primary">
+      Falar com advogado
+    </a>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero">
+      <div>
+        <small>Direito bancário e empresarial</small>
+        <h1>Seu maior inimigo não é a dívida. É a falta de estratégia.</h1>
+        <p class="lead">
+          Recupere sua liberdade financeira, renegocie dívidas com inteligência jurídica
+          e proteja seu patrimônio com o suporte do escritório
+          <strong>Franco Mendonça Advocacia</strong>.
+        </p>
+        <a href="https://api.whatsapp.com/send?phone=5516999781654&text=Ol%C3%A1!%20Gostaria%20de%20uma%20an%C3%A1lise%20jur%C3%ADdica%20gratuita." class="btn-primary">
+          Quero uma análise gratuita do meu caso
+        </a>
+      </div>
+      <div class="hero-card">
+        <h2>Você sente que as dívidas estão sufocando sua empresa?</h2>
+        <p>
+          Altas taxas bancárias, empréstimos mal negociados e cobranças constantes podem
+          colocar em risco tudo o que você construiu. Com a estratégia certa, é possível
+          reduzir juros, suspender cobranças abusivas e proteger seu patrimônio, ganhando
+          tempo para reorganizar a vida financeira do seu negócio.
+        </p>
+      </div>
+    </section>
+
+    <!-- SEÇÃO: DOR DO EMPRESÁRIO -->
+    <div class="section-wrapper">
+      <section class="section">
+        <div class="subtitle">para empresários que não querem perder o que construíram</div>
+        <h2>Você construiu uma empresa… mas as dívidas começaram a sufocar.</h2>
+        <p>
+          Você investiu anos de trabalho, tempo e dinheiro no seu negócio. Mas as taxas bancárias,
+          limites rotativos, empréstimos mal estruturados e a pressão do fluxo de caixa começaram a se acumular.
+        </p>
+        <p>
+          De repente, seu nome e o da sua empresa estão em sistemas de cobrança, seu patrimônio pessoal
+          é ameaçado e as noites de sono já não são as mesmas.
+        </p>
+        <p>
+          O que muitos empresários não sabem é que boa parte dessas cobranças pode ser
+          <strong>ilegal, abusiva ou renegociável</strong> com o apoio jurídico certo.
+        </p>
+      </section>
+    </div>
+
+    <!-- SEÇÃO: QUEM SOMOS -->
+    <div class="section-wrapper bg-light">
+      <section class="section">
+        <div class="subtitle">quem somos</div>
+        <h2>Estratégia jurídica para empresários que precisam respirar.</h2>
+        <p>
+          O <strong>Franco Mendonça Advocacia</strong> é um escritório voltado à
+          <strong>Defesa do Empresário</strong>, com forte atuação em
+          <strong>Direito Bancário, Empresarial e Tributário</strong>.
+        </p>
+        <p>
+          Nossa missão é construir soluções reais para empresários endividados, atuando com
+          inteligência jurídica para <strong>proteger, renegociar e restaurar</strong> a vida financeira
+          de empresas e empresários.
+        </p>
+        <p>
+          Através de uma análise minuciosa de contratos, cobranças e garantias, já ajudamos
+          clientes a evitar falência, suspender cobranças abusivas e restabelecer sua saúde
+          financeira, mesmo em situações críticas.
+        </p>
+
+        <div class="badges">
+          <span class="badge">Atuação especializada</span>
+          <span class="badge">Estratégia personalizada</span>
+          <span class="badge">Atendimento em todo o Brasil</span>
+        </div>
+      </section>
+    </div>
+
+    <!-- SEÇÃO: DADO DE IMPACTO E SERVIÇOS -->
+    <div class="section-wrapper">
+      <section class="section">
+        <h2>A cada 10 empresários endividados, 6 não sabem que podem estar sendo cobrados de forma ilegal.</h2>
+        <p>
+          A maioria das empresas paga <strong>juros abusivos</strong> sem saber, perde patrimônio sem defesa
+          adequada e entra em colapso por não contar com uma estratégia jurídica personalizada.
+        </p>
+        <p>
+          A boa notícia é que, com a orientação correta, é possível
+          <strong>rever valores, negociar prazos, suspender cobranças</strong> e proteger o que você levou anos para construir.
+        </p>
+
+        <h2 style="margin-top:32px;">Nossos serviços atuam em todas as frentes que sufocam o empresário.</h2>
+        <p>
+          Atendemos desde a análise de contratos bancários até a defesa jurídica completa em processos de cobrança
+          e execução. Confira algumas das soluções oferecidas pelo
+          <strong>Franco Mendonça Advocacia</strong>:
+        </p>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Renegociação de dívidas bancárias</h3>
+            <p>
+              Revisão de contratos, redução de juros, alongamento de prazos e busca por condições
+              mais sustentáveis para o seu negócio.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Análise de juros abusivos</h3>
+            <p>
+              Auditoria de contratos e cobranças para identificar encargos ilegais ou abusivos,
+              com ações judiciais ou negociais para correção.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Defesa do empresário endividado</h3>
+            <p>
+              Atuação estratégica para proteger o patrimônio do empresário em execuções, cobranças,
+              ações de busca e apreensão e outras medidas bancárias.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Recuperação Judicial e prevenção à falência</h3>
+            <p>
+              Estruturação de medidas legais para reorganizar dívidas, preservar a atividade empresarial
+              e evitar o encerramento forçado da empresa.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Consultoria jurídica empresarial</h3>
+            <p>
+              Aconselhamento contínuo para decisões estratégicas, contratos, estrutura societária e
+              proteção do patrimônio dos sócios.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Consultoria tributária</h3>
+            <p>
+              Análise de carga tributária, identificação de oportunidades de economia lícita e prevenção
+              de riscos fiscais que podem comprometer o caixa da empresa.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- SEÇÃO: DIFERENCIAIS -->
+    <div class="section-wrapper bg-light">
+      <section class="section">
+        <div class="subtitle">por que escolher o franco mendonça advocacia</div>
+        <h2>Mais que advogados. Somos estrategistas jurídicos do seu negócio.</h2>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Atuação focada em Direito Bancário, Empresarial e Tributário</h3>
+            <p>
+              Especialização para lidar com bancos, credores, contratos complexos e cobranças agressivas,
+              sempre buscando a melhor estratégia para o empresário.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Diagnóstico jurídico e financeiro gratuito</h3>
+            <p>
+              Analisamos sua situação sem custo inicial, identificando riscos, oportunidades de defesa
+              e caminhos possíveis antes de qualquer decisão.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Visão estratégica do negócio</h3>
+            <p>
+              O foco não é apenas “ganhar processos”, mas preservar a continuidade da empresa, o fluxo de caixa
+              e o patrimônio do empresário a médio e longo prazo.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Acompanhamento próximo e humanizado</h3>
+            <p>
+              Atendimento direto, com explicações claras sobre riscos, prazos e expectativas, para que
+              você decida com segurança.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Atendimento digital para todo o Brasil</h3>
+            <p>
+              Reuniões por videoconferência, WhatsApp e e-mail, permitindo que empresas de qualquer estado
+              sejam atendidas com agilidade.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Atuação preventiva</h3>
+            <p>
+              Além de atuar em momentos de crise, ajudamos a estruturar contratos e relações com bancos
+              para evitar novos problemas no futuro.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- SEÇÃO: FAQ -->
+    <div class="section-wrapper">
+      <section class="section">
+        <div class="subtitle">dúvidas frequentes</div>
+        <h2>Tem dúvidas? Nós respondemos.</h2>
+
+        <div class="faq">
+          <div class="faq-item">
+            <h3>Tenho medo de entrar com ação contra o banco. Isso pode piorar minha situação?</h3>
+            <p>
+              Quando existe uma <strong>estratégia jurídica bem construída</strong>, a ação não piora sua situação.
+              Pelo contrário: pode garantir mais tempo, suspender cobranças abusivas e abrir espaço para
+              uma negociação em condições mais justas.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>Minha empresa está com o nome sujo. Ainda dá tempo de recuperar?</h3>
+            <p>
+              Sim. Em muitos casos é possível <strong>rever dívidas, reduzir juros, alongar prazos</strong> e,
+              em determinadas situações, restaurar o crédito com segurança, a partir de medidas judiciais
+              e negociais bem planejadas.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>Atendem empresas de todo o Brasil?</h3>
+            <p>
+              Sim. Nosso atendimento é <strong>100% digital</strong>, possibilitando reuniões e acompanhamento
+              de casos em qualquer estado brasileiro, com a mesma qualidade e proximidade.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>Quanto custa a consultoria?</h3>
+            <p>
+              Realizamos uma <strong>análise inicial gratuita</strong> do seu caso. Após o diagnóstico,
+              apresentamos uma proposta clara, transparente e adequada à realidade da sua empresa.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- CTA FINAL -->
+  <section class="cta-final">
+    <h2>Quanto mais tempo você espera, mais os juros crescem.</h2>
+    <p>
+      Comece a resolver hoje mesmo. Agende uma análise jurídica gratuita do seu caso e descubra como
+      suspender cobranças, reduzir juros e proteger o patrimônio que você levou anos para construir.
+    </p>
+    <a href="https://api.whatsapp.com/send?phone=5516999781654&text=Ol%C3%A1!%20Gostaria%20de%20conversar%20sobre%20as%20d%C3%ADvidas%20da%20minha%20empresa." class="btn-primary">
+      Falar com um advogado agora
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p><strong>Franco Mendonça Advocacia</strong></p>
+    <p>Funcionamento: Segunda a Sexta – 8:30 às 18:30</p>
+    <p>
+      Contato:
+      <a href="mailto:francomendonça@hotmail.com">francomendonça@hotmail.com</a> ·
+      WhatsApp: (16) 99978-1654
+    </p>
+    <p>
+      Instagram:
+      <a href="https://www.instagram.com/adv_empresarial_tributario" target="_blank">@adv_empresarial_tributario</a>
+    </p>
+    <p>Franco Mendonça Advocacia © Todos os direitos reservados</p>
+  </footer>
+</body>
+</html>
